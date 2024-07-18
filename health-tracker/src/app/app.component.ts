@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
+export interface Workout {
+  username: string;
+  type: string;
+  minutes: number;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  newWorkout: Workout = { username: '', type: '', minutes: 0 };
   title: string="Workout-Tracker";
   workouts: any[] = [];
   showWorkoutList: boolean = false;
@@ -16,7 +23,7 @@ export class AppComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalPages: number = 1;
-  constructor(private toastr: ToastrService) {}
+  constructor(public toastr: ToastrService) {}
 
 
 
@@ -28,6 +35,11 @@ export class AppComponent implements OnInit {
     const username = usernameInput.value;
     const type = workoutTypeInput.value;
     const minutes = workoutMinutesInput.value;
+
+    if (this.newWorkout.username && this.newWorkout.type && this.newWorkout.minutes) {
+      this.workouts.push({ ...this.newWorkout });
+      this.newWorkout = { username: '', type: '', minutes: 0 };
+    }
 
     if (username && type && minutes) {
       const workout = {
@@ -45,8 +57,6 @@ export class AppComponent implements OnInit {
       workoutTypeInput.value = '';
       workoutMinutesInput.value = '';
       this.updatePaginatedWorkouts();
-
-      // Refresh filtered and paginated workouts
       this.filterWorkouts();
     } else {
       this.toastr.error('Please fill out all fields.', 'Error'); 
