@@ -350,7 +350,6 @@
     </select>
     <button (click)="toggleWorkoutList()" class="btn">Display</button>
     <button  (click)="clearAll()"  class="btn clear-btn" >Clear</button>
-    <button  (click)="clearAll()"  class="btn clear-btn" >Visualize</button>
   </div>
 
   <!-- Workout List Table -->
@@ -361,6 +360,7 @@
           <th>Username</th>
           <th>Workout Type</th>
           <th>Minutes</th>
+          <th>Progress</th>
         </tr>
       </thead>
       <tbody>
@@ -368,6 +368,9 @@
           <td>{{ workout.username }}</td>
           <td>{{ workout.type }}</td>
           <td>{{ workout.minutes }}</td>
+          <td>
+            <button (click)="visualizeWorkout(workout)" class="btn">Visualize</button> <!-- Visualize Button -->
+          </td>
         </tr>
       </tbody>
     </table>
@@ -379,6 +382,12 @@
       <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
     </div>
   </div>
+
+  <div class="chart-container" *ngIf="selectedWorkout">
+  <h2>Workout Data for {{ selectedWorkout.username }}</h2>
+  <button (click)="visualizeWorkout(selectedWorkout)" class="btn">See visuals</button> <!-- Visualize Button -->
+  <canvas id="workoutChart"></canvas>
+</div>
 
 
   <!-- Footer -->

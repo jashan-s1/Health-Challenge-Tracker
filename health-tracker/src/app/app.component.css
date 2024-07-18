@@ -311,6 +311,7 @@ form {
   color: white;
   cursor: pointer;
   border: #0056b3;
+  width: 55%;
 }
 
 .btn:hover {
@@ -412,4 +413,17 @@ form {
   color: blue; /* Change link text color */
   text-decoration: underline; /* Add underline to link text */
   margin-left: 5px; /* Add some space between text */
+}
+
+.chart-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.);
+  text-align: center;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 }

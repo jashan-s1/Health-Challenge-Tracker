@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Chart, registerables } from 'chart.js';
+
+Chart.register(...registerables);
+
 
 export interface Workout {
   username: string;
@@ -23,9 +27,14 @@ export class AppComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalPages: number = 1;
+
+  selectedWorkout: Workout | null = null;
+  chart: Chart | null = null; // Chart instance
+  allWorkoutTypes: string[] = []; // List of all workout types
+
   constructor(public toastr: ToastrService) {}
 
-
+  
 
   addWorkout() {
     const usernameInput = document.getElementById('username') as HTMLInputElement;
@@ -66,6 +75,8 @@ export class AppComponent implements OnInit {
   toggleWorkoutList() {
     this.showWorkoutList = !this.showWorkoutList;
   }
+
+  
   updatePaginatedWorkouts() {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
@@ -122,11 +133,58 @@ export class AppComponent implements OnInit {
     this.showWorkoutList = !this.showWorkoutList;
   }
 
+  visualizeWorkout(workout: Workout) {
+    this.selectedWorkout = workout;
+    this.renderChart(workout);
+  }
+  renderChart(workout: Workout) {
+    const ctx = document.getElementById('workoutChart') as HTMLCanvasElement;
+    this.allWorkoutTypes = Array.from(new Set(this.workouts.map(w => w.type)));
+
+    // Initialize data for all workout types with 0 minutes
+    const chartData = this.allWorkoutTypes.map(type => {
+      if (type === workout.type) {
+        return workout.minutes;
+      }
+      return 0;
+    });
+
+    // Destroy the previous chart if it exists
+    if (this.chart) {
+      this.chart.destroy();
+    }
+    
+    this.chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: this.allWorkoutTypes,
+        datasets: [{
+          label: 'Minutes',
+          data: chartData,
+          backgroundColor: 'rgba(75, 192, 192, 0.5)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 60 // Fixed y-axis range
+          }
+        }
+      }
+    });
+  }
+
   ngOnInit() {
     const savedWorkouts = localStorage.getItem('workouts');
     if (savedWorkouts) {
       this.workouts = JSON.parse(savedWorkouts);
       this.filterWorkouts();
     }
+    // Render initial empty chart with all workout types
+    this.allWorkoutTypes = Array.from(new Set(this.workouts.map(w => w.type)));
+    this.renderChart({ username: '', type: '', minutes: 0 });
   }
 }
