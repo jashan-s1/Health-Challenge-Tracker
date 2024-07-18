@@ -398,6 +398,17 @@
     </div>
   </div>
 
+  <div class="chart-container">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [colors]="barChartColors"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+
 
   <!-- Footer -->
   <footer>

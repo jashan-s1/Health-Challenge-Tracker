@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ChartOptions, ChartType } from 'chart.js';
+import { Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +19,19 @@ export class AppComponent implements OnInit {
   itemsPerPage: number = 5;
   totalPages: number = 1;
   constructor(private toastr: ToastrService) {}
+
+  // Chart variables
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+  };
+  public barChartLabels: Label[] = [];
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [];
+  public barChartData: any[] = [];
+  public barChartColors: Color[] = [
+    { backgroundColor: 'rgba(63,81,181,0.3)' }
+  ];
 
 
   addWorkout() {
@@ -44,6 +59,7 @@ export class AppComponent implements OnInit {
       workoutTypeInput.value = '';
       workoutMinutesInput.value = '';
       this.updatePaginatedWorkouts();
+      this.updateChartData();
 
       // Refresh filtered and paginated workouts
       this.filterWorkouts();
@@ -65,6 +81,7 @@ export class AppComponent implements OnInit {
     this.workouts = [];
     localStorage.removeItem('workouts');
     this.updatePaginatedWorkouts();
+    this.updateChartData();
     this.toastr.success('Cleared all Workouts!');
   }
 
@@ -117,5 +134,16 @@ export class AppComponent implements OnInit {
       this.workouts = JSON.parse(savedWorkouts);
       this.filterWorkouts();
     }
+  }
+  updateChartData() {
+    const workoutTypes = Array.from(new Set(this.workouts.map(w => w.type)));
+    const workoutMinutes = workoutTypes.map(type => {
+      return this.workouts
+        .filter(w => w.type === type)
+        .reduce((sum, w) => sum + w.minutes, 0);
+    });
+
+    this.barChartLabels = workoutTypes;
+    this.barChartData = [{ data: workoutMinutes, label: 'Workout Minutes' }];
   }
 }
