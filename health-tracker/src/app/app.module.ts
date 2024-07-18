@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -18,7 +17,6 @@ import { NgChartsModule } from 'ng2-charts';
     AppRoutingModule,
     FormsModule,
     ToastrModule.forRoot() ,
-    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
