@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalPages: number = 1;
-
+  showTable = false;
   selectedWorkout: Workout | null = null;
   chart: Chart | null = null; // Chart instance
   allWorkoutTypes: string[] = []; // List of all workout types
@@ -75,6 +75,11 @@ export class AppComponent implements OnInit {
   toggleWorkoutList() {
     this.showWorkoutList = !this.showWorkoutList;
   }
+
+  toggleTableDisplay() {
+    this.showTable = !this.showTable;
+  }
+
 
   
   updatePaginatedWorkouts() {
