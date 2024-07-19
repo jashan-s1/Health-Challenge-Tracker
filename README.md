@@ -50,4 +50,8 @@
 
 The coverage report is generated using Karma and can be found in the coverage directory. To view the detailed coverage report, open the index.html file in the coverage/workout-tracker directory.The project has unit tests with the following coverage:
 
-![Report](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Main.png)
+![Report](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Report.png)
+
+![Screen](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Screenshot(66).png)
+
+![Screenshot](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Screenshot(67).png)
