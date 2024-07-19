@@ -34,15 +34,22 @@
 ###
 
 ## Screenshots
+<div align="center">
+<img  width="50%"src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Main.png" width="400" height="400">
+</div>
+<br/>
+<div align="center">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Search.png" width="500" height="150">
+</div>
+<br/>
+<div align="center">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/chart.png" width="400" height="400">
+</div>
+<br/>
+<div align="center">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png" width="400" height="400">
+</div>
 
-![Add Workouts](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Main.png)
-
-
-![Search](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Search.png)
-
-![Chart](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/chart.png)
-
-![Visual](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png)
 
 
 ###
