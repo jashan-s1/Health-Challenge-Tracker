@@ -385,6 +385,7 @@
   </div>
 
   <div class="chart-container" *ngIf="selectedWorkout">
+    <button class="close-chart-btn" (click)="closeChartContainer()">&times;</button>
   <h2>Workout Data for {{ selectedWorkout.username }}</h2>  <canvas id="workoutChart"></canvas>
 </div>
 

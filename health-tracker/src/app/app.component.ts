@@ -136,6 +136,14 @@ export class AppComponent implements OnInit {
     this.showWorkoutList = !this.showWorkoutList;
   }
 
+  closeChartContainer() {
+    this.selectedWorkout = null;
+    if (this.chart) {
+      this.chart.destroy();
+      this.chart = null;
+    }
+  }
+  
   visualizeWorkout(workout: Workout) {
     this.selectedWorkout = workout;
     this.cdr.detectChanges();
@@ -165,8 +173,12 @@ export class AppComponent implements OnInit {
         datasets: [{
           label: 'Minutes',
           data: chartData,
-          backgroundColor: 'rgba(75, 192, 192, 0.5)',
-          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: this.allWorkoutTypes.map(type => 
+            type === workout.type ? 'rgba(75, 192, 192, 0.5)' : 'rgba(211, 211, 211, 0.5)'
+          ),
+          borderColor: this.allWorkoutTypes.map(type => 
+            type === workout.type ? 'rgba(75, 192, 192, 1)' : 'rgba(211, 211, 211, 1)'
+          ),
           borderWidth: 1
         }]
       },

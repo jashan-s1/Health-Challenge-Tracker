@@ -374,6 +374,7 @@ form {
 }
 
 .chart-container {
+  position: relative;
   margin-top: 20px;
   width: 100%;
   max-width: 600px;
@@ -385,6 +386,20 @@ form {
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.close-chart-btn {
+  position: absolute;
+  /* right: 10%; */
+  left: 93%;
+  top: 2%;
+  width: 10%;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0%;
+  margin-top: 0%;
 }
 
 .close-btn {
