@@ -52,6 +52,6 @@ The coverage report is generated using Karma and can be found in the coverage di
 
 ![Report](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Report.png)
 
-![Screen](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Screenshot(66).png)
+![Screen](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/screen1.png)
 
-![Screenshot](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Screenshot(67).png)
+![Screenshot](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/screen2.png)
