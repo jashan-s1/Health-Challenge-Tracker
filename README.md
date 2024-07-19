@@ -75,22 +75,16 @@ To run this project locally, follow these steps:
 
 2. Install dependencies:
     ```bash
-    npm install -g @angular/cli@
+    npm install
 
     ```
 
-3. Create an App:
-    ```bash
-    ng new health-tracker
-    cd health-tracker
-    ```
-
-5. Start the applicaton:
+3. Start the applicaton:
     ```bash
     ng serve
     ```
 
-6. Open your browser and visit `http://localhost:4200` to see the workout tracker.
+4. Open your browser and visit `http://localhost:4200` to see the workout tracker.
 
 ## Contributing
 
