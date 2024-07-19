@@ -385,9 +385,7 @@
   </div>
 
   <div class="chart-container" *ngIf="selectedWorkout">
-  <h2>Workout Data for {{ selectedWorkout.username }}</h2>
-  <button (click)="visualizeWorkout(selectedWorkout)" class="btn">See visuals</button> <!-- Visualize Button -->
-  <canvas id="workoutChart"></canvas>
+  <h2>Workout Data for {{ selectedWorkout.username }}</h2>  <canvas id="workoutChart"></canvas>
 </div>
 
 

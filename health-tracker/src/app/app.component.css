@@ -146,6 +146,7 @@ form {
 
 /* Container for the workout list */
 .workout-list {
+  position: relative;
   margin: 20px auto;
   padding: 10px;
   width: 80%;
@@ -154,10 +155,12 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Table styles */
 .workout-list table {
+  align-items: center;
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
@@ -194,46 +197,6 @@ form {
   }
 }
 
-  
-/* Container for the workout list */
-.workout-list {
-  margin: 20px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  transition: all 0.3s ease-in-out;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Table styles */
-.workout-list table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-/* Table header styles */
-.workout-list th {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-}
-
-/* Table body styles */
-.workout-list td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Table row hover effect */
-.workout-list tr:hover {
-  background-color: #f1f1f1;
-}
 
 .pagination-controls {
   display: flex;
@@ -426,12 +389,18 @@ form {
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  /* right: 10%; */
+  left: 93%;
+  top: 2%;
+  width: 10%;
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
+  padding: 0%;
+  margin-top: 0%;
+  /* margin-right: 0%;
+  margin-left: 100%; */
 }
 
 .close-btn:hover {

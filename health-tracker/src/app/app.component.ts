@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Chart, registerables } from 'chart.js';
 
@@ -32,9 +32,7 @@ export class AppComponent implements OnInit {
   chart: Chart | null = null; // Chart instance
   allWorkoutTypes: string[] = []; // List of all workout types
 
-  constructor(public toastr: ToastrService) {}
-
-  
+  constructor(public toastr: ToastrService,private cdr: ChangeDetectorRef) {}
 
   addWorkout() {
     const usernameInput = document.getElementById('username') as HTMLInputElement;
@@ -140,6 +138,7 @@ export class AppComponent implements OnInit {
 
   visualizeWorkout(workout: Workout) {
     this.selectedWorkout = workout;
+    this.cdr.detectChanges();
     this.renderChart(workout);
   }
   renderChart(workout: Workout) {
