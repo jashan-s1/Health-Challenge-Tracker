@@ -92,6 +92,6 @@ To run this project locally, follow these steps:
 
 6. Open your browser and visit `http://localhost:4200` to see the workout tracker.
 
-7. ## Contributing
+## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
