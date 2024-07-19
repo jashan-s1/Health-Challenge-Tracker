@@ -43,11 +43,11 @@
 </div>
 <br/>
 <div align="center">
- <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/chart.png" width="400" height="400">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/chart.png" width="600" height="400">
 </div>
 <br/>
 <div align="center">
- <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png" width="400" height="400">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png" width="800" height="350">
 </div>
 
 
