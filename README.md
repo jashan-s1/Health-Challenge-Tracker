@@ -47,7 +47,7 @@
 </div>
 <br/>
 <div align="center">
- <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png" width="800" height="350">
+ <img width="40%" src="https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png" width="800" height="300">
 </div>
 
 
