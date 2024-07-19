@@ -35,12 +35,19 @@
 
 ## Screenshots
 
-![Add Workouts](https://github.com/jashan-s1/AspireNex/blob/main/Task1%20(Portfolio)/public/project.png)
+![Add Workouts](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Main.png)
 
 
-![Project Page](https://github.com/jashan-s1/AspireNex/blob/main/Task1%20(Portfolio)/public/education.png)
+![Search](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/Search.png)
 
-<div align="left">
-</div>
+![Chart](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/chart.png)
+
+![Visual](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Sample/visual.png)
+
 
 ###
+## Code Coverage Report
+
+The coverage report is generated using Karma and can be found in the coverage directory. To view the detailed coverage report, open the index.html file in the coverage/workout-tracker directory.The project has unit tests with the following coverage:
+
+![Report](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/Main.png)
