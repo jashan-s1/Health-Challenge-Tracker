@@ -90,6 +90,7 @@ export class AppComponent implements OnInit {
     this.workouts = [];
     localStorage.removeItem('workouts');
     this.updatePaginatedWorkouts();
+    this.closeChartContainer();
     this.toastr.success('Cleared all Workouts!');
   }
 
@@ -173,12 +174,8 @@ export class AppComponent implements OnInit {
         datasets: [{
           label: 'Minutes',
           data: chartData,
-          backgroundColor: this.allWorkoutTypes.map(type => 
-            type === workout.type ? 'rgba(75, 192, 192, 0.5)' : 'rgba(211, 211, 211, 0.5)'
-          ),
-          borderColor: this.allWorkoutTypes.map(type => 
-            type === workout.type ? 'rgba(75, 192, 192, 1)' : 'rgba(211, 211, 211, 1)'
-          ),
+          backgroundColor: 'rgba(75, 192, 192, 0.5)',
+          borderColor: 'rgba(75, 192, 192, 1)',
           borderWidth: 1
         }]
       },
