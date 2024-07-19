@@ -62,3 +62,36 @@ The coverage report is generated using Karma and can be found in the coverage di
 ![Screen](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/screen1.png)
 
 ![Screenshot](https://github.com/jashan-s1/Health-Challenge-Tracker/blob/main/health-tracker/src/assets/Screenshot/screen2.png)
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/jashan-s1/Health-Challenge-Tracker.git
+    cd Health-Challenge-Tracker
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install -g @angular/cli@
+
+    ```
+
+3. Create an App:
+    ```bash
+    ng new health-tracker
+    cd health-tracker
+    ```
+
+5. Start the applicaton:
+    ```bash
+    ng serve
+    ```
+
+6. Open your browser and visit `http://localhost:4200` to see the workout tracker.
+
+7. ## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
